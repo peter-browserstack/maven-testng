@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="tests" name="Failed suite [Parallel]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="4" parallel="tests" name="SingleTestIE(failed)" verbose="0">
+    <parameter name="environment" value="ie"/>
+    <parameter name="config" value="parallel.conf.json"/>
+    <classes>
+      <class name="com.browserstack.SingleTest">
+        <methods>
+          <include name="test"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.browserstack.SingleTest -->
+    </classes>
+  </test> <!-- SingleTestIE(failed) -->
+  <test thread-count="4" parallel="tests" name="SingleTestSafari(failed)" verbose="0">
+    <parameter name="environment" value="safari"/>
+    <parameter name="config" value="parallel.conf.json"/>
+    <classes>
+      <class name="com.browserstack.SingleTest">
+        <methods>
+          <include name="test"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.browserstack.SingleTest -->
+    </classes>
+  </test> <!-- SingleTestSafari(failed) -->
+  <test thread-count="4" parallel="tests" name="SingleTestChrome(failed)" verbose="0">
+    <parameter name="environment" value="chrome"/>
+    <parameter name="config" value="parallel.conf.json"/>
+    <classes>
+      <class name="com.browserstack.SingleTest">
+        <methods>
+          <include name="test"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.browserstack.SingleTest -->
+    </classes>
+  </test> <!-- SingleTestChrome(failed) -->
+</suite> <!-- Failed suite [Parallel] -->
